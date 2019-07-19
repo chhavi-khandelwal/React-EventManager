@@ -15,7 +15,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * TabScreen.js - child of TabManager. Its the screen that gets updated as per the focussed tab
 
 ## Working
-* Used the concept of LiftingUpState in React
-* if tab is already opened, do not open again
+* Used the concept of `LiftingUpState` in React
+* if tab is already opened, click would be no-op
+* If only single tab is opened, it can not be closed.
 * If tab exceeds the width of manager, scroll over header is shown and every tabs' width gets compressed
 * state of openedTabs is maintained as an Array of objects, which eases the maintainability to render the html which needs array to iterate over it.

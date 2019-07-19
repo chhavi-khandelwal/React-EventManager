@@ -58,7 +58,7 @@ button {
 
 .event-list header {
   padding: 10px 20px;  
-  text-align: center;
+  justify-content: center;
 }
 
 header {
@@ -83,10 +83,10 @@ header {
   border-bottom: 1px solid #6f756f;
   position: relative;
   max-width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .tab {
-  background-color: #fff;
   max-width: 100px;
   min-width: 70px;
   flex-grow: 1;

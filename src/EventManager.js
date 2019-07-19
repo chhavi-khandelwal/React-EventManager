@@ -39,7 +39,9 @@ class EventManager extends React.Component {
     let positionInOpenedtabs;
 
     //donot close if only one tab is left
-    if (tabIds.length === 1) { return; }
+    if (tabIds.length === 1) {
+      alert('last tab can not be closed'); return;
+    }
 
     //flag: if focussed tab is closed, focus its previous tab after closing
     if (this.state.focussedTab.id === id) {
