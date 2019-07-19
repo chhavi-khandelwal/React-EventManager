@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.manager-container {
+  display: flex;
+  margin: 10px;
+  height: 300px;
+  max-width: 700px;
+}
+
+.event-list {
+  min-width: 220px;
+}
+
+.event-list ul {
+  overflow-y: scroll;
+  padding-right: 10px;
+  border-left: 1px solid #6f756f;
+  border-bottom: 1px solid #6f756f;
+  max-height: calc(300px - 48px);
+}
+
+.event-list ul button {
+  border: none;
+  border-bottom: 1px solid #6f756f;
+  border-right: 1px solid #6f756f;
+  padding: 10px 20px;
+  background-color: #ECF0F1;
+  width: 100%;
+}
+
+button {
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-list header {
+  padding: 10px 20px;  
+  text-align: center;
+}
+
+header {
+  background-color: #95999A;
+  display: flex;
+  height: 40px;
+}
+
+.tab-manager header {
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 700px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.tab-manager header button{
+  border: none;
+  padding: 10px 20px;
+  height: 35px;
+  border-right: 1px solid #6f756f;
+  border-bottom: 1px solid #6f756f;
+  position: relative;
+  max-width: 100%;
+}
+
+.tab {
+  background-color: #fff;
+  max-width: 100px;
+  min-width: 70px;
+  flex-grow: 1;
+}
+
+.tab-manager header button span {
+  position: absolute;
+  right: 0px;
+  padding: 5px;
+  bottom: 3px;
+}
+
+.tab-manager {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.content-manager {
+  border-bottom: 1px solid #6f756f;
+  border-right: 1px solid #6f756f;
+  max-height: calc(300px - 48px);
+  min-height: calc(300px - 48px);
+  overflow-y: scroll;
+}
+
+.screen {
+  padding-top: 10px;
+}
+
+.screen ul {
+  text-decoration: none;
+  font-size: 12px;
+  border: 1px solid;
+  overflow-y: scroll;
+  margin-right: 10px;
+  border-bottom: none;
+}
+
+.screen ul li {
+  color: #a7aca7;
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid #a7aca7;
+}
+
+.screen ul li:nth-child(even){
+  background-color: #F7FBFC;
+}
+
+.rawdata {
+  flex-grow: 1;
+}
+
+.timestamp {
+  padding-right: 10px;
+}
