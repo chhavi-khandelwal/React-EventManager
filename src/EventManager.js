@@ -33,7 +33,8 @@ class EventManager extends React.Component {
     this.setState({ focussedTab: { id: event.id, data: event.data } });
   }
 
-  closeTab(id) {
+  closeTab(e, id) {
+    e.stopPropagation();
     const tabIds = this.openedTabIds;
     let changeFocus = false;
     let positionInOpenedtabs;
@@ -59,6 +60,9 @@ class EventManager extends React.Component {
     }
     let tabs = this.state.openedTabs;
     tabs.splice(positionInOpenedtabs, 1);
+    if (positionInOpenedtabs === 0) {
+      positionInOpenedtabs = 1;
+    }
     //only update focussed tab, if the same has been closed
     this.setState({ openedTabs: tabs  }, () => changeFocus && this.updateFocussedTab(this.state.openedTabs[positionInOpenedtabs - 1]));
   }

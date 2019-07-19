@@ -11,8 +11,8 @@ class TabManager extends React.Component {
     this.props.updateFocussedTab(tab);
   }
 
-  closeTab(id) {
-    this.props.closeTab(id);
+  closeTab(e, id) {
+    this.props.closeTab(e, id);
   }
 
   render() {
@@ -25,7 +25,7 @@ class TabManager extends React.Component {
                 return (
                   <div className="tab" key={ id }>
                     <button onClick={ this.showEventScreen.bind(this, tab) }>{ tab.name }
-                      <span onClick={ this.closeTab.bind(this, tab.id) }>x</span>
+                      <span onClick={ (e) => this.closeTab.bind(this, e, tab.id)() }>x</span>
                     </button>
                   </div>
                 )
